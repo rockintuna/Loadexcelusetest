@@ -1,0 +1,25 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'me.rockintuna'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.apache.poi:poi:4.0.1'
+    implementation 'org.apache.poi:poi-ooxml:4.0.1'
+    implementation 'com.jcraft:jsch:0.1.55'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
